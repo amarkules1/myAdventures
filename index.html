@@ -22,7 +22,7 @@
 			<ul id="navBar">
 				<li id="navElement"><a href="https://github.com/amarkules1/">My GitHub Page</a></li>
 				<?php
-				unset($_SESSION['loggedinAdv']);
+				$_SESSION['loggedinAdv'] = false;
 					if(isset($_SESSION['loggedinAdv'])){
 						if($_SESSION['loggedinAdv']==true){
 							echo "<li id=\"navElement\"><a href=\"#\">New Post</a></li>";
