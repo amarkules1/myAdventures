@@ -21,27 +21,45 @@
 		<div id="navLinks" style="float: right">
 			<ul id="navBar">
 				<li id="navElement"><a href="https://github.com/amarkules1/">My GitHub Page</a></li>
-				<?php
-				$_SESSION['loggedinAdv'] = false;
-					if(isset($_SESSION['loggedinAdv'])){
-						if($_SESSION['loggedinAdv']==true){
-							echo "<li id=\"navElement\"><a href=\"#\">New Post</a></li>";
-							echo "<li id=\"navElement\"><a href=\"#\">Log Out</a></li>";
-						}
-						else{
-							echo "<li id=\"navElement\"><a href=\"login.php\">Admin Log In</a></li>";
-						}
-					}
-					else{
-						echo "<li id=\"navElement\"><a href=\"login.php\">Admin Log In</a></li>";
-					}
-				?>
 			</ul>
 		</div>
 	</div>
 </header>
 <div class="container">
-<h2> Past Adventures</h2>
+	<h2> Past Adventures</h2>
+	<!-- <?php
+	
+	try {
+		$connString = "mysql:host=localhost;dbname=adventures";
+	    $user ="root";
+		$pass = "";
+		
+		$pdo = new PDO ($connString, $user,$pass);
+		$pdo-> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		
+			$sql = "select * from posts";
+			$result = $pdo->query($sql);
+		
+		while($row = $result->fetch()){
+			echo "<div id="blogPost"><h4>" . $row['title'] . "</h4>";
+			$images = $row['images'].explode(',');
+			foreach ($images as $pic){
+				echo "</br><img src=\"" . $pic . "\"></br>";
+			}
+			echo $row['description'] . "</div>"
+			
+		 }//end whi
+		$pdo = null;
+	}
+	
+	catch(PDOException $e){
+		die($e -> getMessage());
+	}
+	
+?> -->
+<div id="blogPost"><h4>Al Sabo</h4>
+</br><img src="https://i.redd.it/k2ev2ndipazy.jpg"></br>
+<p>Not an actual pic of Al Sabo, Just a random picture from reddit.</p>
 </div>
 </body>
 </html>
