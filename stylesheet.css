@@ -23,14 +23,22 @@ li a {
 	float: left;
 }
 h2, h1{
-	color:red;
+	color:#000000;
+	font-family: "Copperplate Gothic Light";
 }
 header {
-	background-color:#dddddd;
+	background-color:#80f780;
 }
 body {
-background-color:grey;}
-p {color:black;}
-a {color:red;}
+background-color:#22d61b;}
+p {color: #000000;}
+a {color:#0caa06;}
 #title {font-weight:bold;}
 #spaced {margin-top:8px;}
+.container{
+	background-color: #84fc84;
+	margin: 8%;
+	padding:5%;}
+img{
+	size:70%;
+	margin:auto; }
